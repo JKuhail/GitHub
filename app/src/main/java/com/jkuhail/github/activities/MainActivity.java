@@ -13,6 +13,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.textfield.TextInputLayout;
 import com.jkuhail.github.R;
 import com.jkuhail.github.app.Constants;
+import com.jkuhail.github.models.AppOwner;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -46,11 +47,10 @@ public class MainActivity extends AppCompatActivity {
 		if (isNotEmpty(etName, inputLayoutName)) {
 			String personName = etName.getText().toString();
 
-			SharedPreferences sp = getSharedPreferences(Constants.APP_SHARED_PREFERENCES, MODE_PRIVATE);
-			SharedPreferences.Editor editor = sp.edit();
-			editor.putString(Constants.KEY_PERSON_NAME, personName);
+			//[Singleton Pattern] #4: Get the only object available
+			AppOwner appOwner = AppOwner.getInstance();
+			appOwner.setName(personName);
 
-			editor.apply();
 		}
 	}
 

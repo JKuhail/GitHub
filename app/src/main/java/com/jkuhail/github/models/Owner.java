@@ -1,7 +1,9 @@
 package com.jkuhail.github.models;
 
 
+
 import io.realm.RealmObject;
+
 
 public class Owner extends RealmObject {
 

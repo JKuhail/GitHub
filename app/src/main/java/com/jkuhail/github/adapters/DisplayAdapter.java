@@ -113,7 +113,7 @@ public class DisplayAdapter extends RecyclerView.Adapter<DisplayAdapter.MyViewHo
 		}
 
 		private void bookmarkRepository(final Repository current) {
-
+			Realm.init(mContext);
 			Realm realm = Realm.getDefaultInstance();
 			realm.executeTransactionAsync(new Realm.Transaction() {
 				@Override

@@ -1,9 +1,14 @@
 package com.jkuhail.github.activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
@@ -47,6 +52,7 @@ public class DisplayActivity extends AppCompatActivity implements NavigationView
 	private List<Repository> browsedRepositories;
 	private GithubAPIService mService;
 	private Realm mRealm;
+	private NavigationView navigationView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,16 +62,14 @@ public class DisplayActivity extends AppCompatActivity implements NavigationView
 		Toolbar toolbar = findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 		getSupportActionBar().setTitle("Showing Browsed Results");
-
 		mRecyclerView = findViewById(R.id.recyclerView);
 		LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 		layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 		mRecyclerView.setLayoutManager(layoutManager);
 
 		mService = RetrofitClient.getGithubAPIService();
-		mRealm = Realm.getDefaultInstance();
 
-		NavigationView navigationView = findViewById(R.id.nav_view);
+		navigationView = findViewById(R.id.nav_view);
 		navigationView.setNavigationItemSelectedListener(this);
 
 		mDrawerLayout = findViewById(R.id.drawer_layout);
@@ -179,6 +183,7 @@ public class DisplayActivity extends AppCompatActivity implements NavigationView
 	}
 
 	private void showBookmarks() {
+		mRealm = Realm.getDefaultInstance();
 		mRealm.executeTransaction(new Realm.Transaction() {
 			@Override
 			public void execute(Realm realm) {
@@ -192,13 +197,13 @@ public class DisplayActivity extends AppCompatActivity implements NavigationView
 		mDrawerLayout.closeDrawer(GravityCompat.START);
 	}
 
+
 	@Override
 	public void onBackPressed() {
 		if (mDrawerLayout.isDrawerOpen(GravityCompat.START))
 			closeDrawer();
 		else {
 			super.onBackPressed();
-			mRealm.close();
 		}
 	}
 }
