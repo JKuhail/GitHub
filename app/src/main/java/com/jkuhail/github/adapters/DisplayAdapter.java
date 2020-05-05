@@ -23,6 +23,10 @@ import java.util.List;
 
 import io.realm.Realm;
 
+/** The Adapter Pattern in android is pre-defined!
+  * The Adapter pattern convert the interface of a class into another interface clients expect.
+ * so as the android Adapter do. Here we takes the data from GitHub API and from the local database and puts it into a View
+ * which is the UI here.*/
 
 public class DisplayAdapter extends RecyclerView.Adapter<DisplayAdapter.MyViewHolder> {
 

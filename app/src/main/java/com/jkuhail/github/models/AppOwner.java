@@ -3,6 +3,7 @@ package com.jkuhail.github.models;
 
 /**In this model, I'm gonna implement 'Singleton Pattern' because we only need one instance of this class.
  * This Pattern improve our code by providing a global point of accessing its instance */
+
 public class AppOwner {
     private  String name;
 
@@ -27,3 +28,4 @@ public class AppOwner {
         this.name = name;
     }
 }
+// see #4 in ManiActivity line 50 :)

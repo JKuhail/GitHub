@@ -1,7 +1,7 @@
 package com.jkuhail.github.activities;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
+
 import android.os.Bundle;
 
 import android.view.View;
@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
 			//[Singleton Pattern] #4: Get the only object available
 			AppOwner appOwner = AppOwner.getInstance();
 			appOwner.setName(personName);
-
 		}
 	}
 
