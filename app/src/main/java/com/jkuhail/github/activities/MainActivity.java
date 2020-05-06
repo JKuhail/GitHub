@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
 			//[Singleton Pattern] #4: Get the only object available
 			AppOwner appOwner = AppOwner.getInstance();
 			appOwner.setName(personName);
+			//[Facade] #4: call the method to a particular object
+			appOwner.print(this , personName);
+
 		}
 	}
 

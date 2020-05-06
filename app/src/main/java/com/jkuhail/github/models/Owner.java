@@ -2,6 +2,10 @@ package com.jkuhail.github.models;
 
 
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.widget.Toast;
+
 import io.realm.RealmObject;
 
 
@@ -26,4 +30,7 @@ public class Owner extends RealmObject {
 	public void setLogin(String login) {
 		this.login = login;
 	}
+
+
+
 }

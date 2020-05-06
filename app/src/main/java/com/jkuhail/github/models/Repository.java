@@ -1,13 +1,16 @@
 package com.jkuhail.github.models;
 
 
+import android.content.Context;
+import android.widget.Toast;
+
 import com.google.gson.annotations.SerializedName;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 
-public class Repository extends RealmObject {
+public class Repository extends RealmObject implements Model {
 
 	@PrimaryKey
 	private int id;
@@ -102,4 +105,11 @@ public class Repository extends RealmObject {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+	//[Facade] #3: implement the required methods
+	@Override
+	public void print(Context context, String msg) {
+		Toast.makeText(context, "This repository name is: " + msg, Toast.LENGTH_SHORT).show();
+	}
 }
+//[Facade] see #4 in DisplayAdapter line 98

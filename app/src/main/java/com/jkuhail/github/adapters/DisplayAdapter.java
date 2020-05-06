@@ -95,9 +95,11 @@ public class DisplayAdapter extends RecyclerView.Adapter<DisplayAdapter.MyViewHo
 			itemView.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
+					//[Facade] #4: call the method to a particular object
+					current.print(mContext , current.getName());
 					String url = current.getHtmlUrl();
-					Uri webpage = Uri.parse(url);
-					Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+					Uri webPage = Uri.parse(url);
+					Intent intent = new Intent(Intent.ACTION_VIEW, webPage);
 					if (intent.resolveActivity(mContext.getPackageManager()) != null) {
 						mContext.startActivity(intent);
 					}
