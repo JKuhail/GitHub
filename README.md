@@ -6,7 +6,7 @@ The app also contains a local database which allows users to save their favourit
 ## Used libraries:
 Retrofit2 , Realm database , RecyclerView ,and CardView.
 
-## used design patterns:
+## Used design patterns:
 Singleton , Adapter , facade ,and Strategy.
 
 ## Notes:
