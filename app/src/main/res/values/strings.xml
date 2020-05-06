@@ -12,6 +12,9 @@
 	<string name="btn_search_repositories">Search Repositories</string>
 	<string name="et_hint_github_username">Github Username</string>
 	<string name="btn_search_github_user">Search Github User Repositories</string>
+	<string name="btn_github_project">Check out our project</string>
+	<string name="btn_github_main">Visit Github</string>
+
 
 	<string name="show_bookmarks">Show Bookmarks</string>
 	<string name="browsed_results">Browsed Results</string>

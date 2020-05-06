@@ -12,6 +12,9 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.jkuhail.github.R;
+import com.jkuhail.github.Strategy.Context;
+import com.jkuhail.github.Strategy.GitHubClick;
+import com.jkuhail.github.Strategy.ProjectClick;
 import com.jkuhail.github.app.Constants;
 import com.jkuhail.github.models.AppOwner;
 
@@ -96,4 +99,15 @@ public class MainActivity extends AppCompatActivity {
 			return true;
 		}
 	}
+	//[Strategy] #5: here we gonna use our methods
+	public void gitHubWeb(View view){
+		Context context = new Context(new GitHubClick());
+		context.executeClick(this);
+	}
+
+	public void projectWeb(View view){
+		Context context = new Context(new ProjectClick());
+		context.executeClick(this);
+	}
+
 }

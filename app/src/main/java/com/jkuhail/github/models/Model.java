@@ -13,3 +13,4 @@ public interface Model {
 }
 
 //[Facade] #2: Make all model classes implements this interface
+//[Facade] #3: See AppOwner.java and Repository.java
