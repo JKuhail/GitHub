@@ -1,7 +1,7 @@
 # GitHub API app (Architecture of Software Systems project)
 The idea of this application is to make it easier for useres to search for repositories or GitHub users.
 The app provides a simple UI which connects directly to GitHub API using Retrofit2 library.
-The app also contains a local database to allow users to save their favourite repositories and check it in offline mode.
+The app also contains a local database which allows users to save their favourite repositories and check it in offline mode.
 
 ## Used libraries:
 Retrofit2 , Realm database , RecyclerView ,and CardView.
