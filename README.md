@@ -1,5 +1,4 @@
 # GitHub API app 
-## (Architecture of Software Systems project)
 
 ### Introduction
 The idea of this application is to make it easier for useres to search for repositories or GitHub users.
@@ -22,8 +21,8 @@ The using of Adapter design pattern is a little bit different in android, but it
 
 Jehad M. Kuhail   120161454
 
-Yasin Kh. Yasin   12016
+Yasin Kh. Yasin   120162214
 
-Hazem Kh. Hammad  12016
+Hazem Kh. Hammad  120160079
 
-Alaa Wadi         12016
+Alaa A. Wadi      120160315
