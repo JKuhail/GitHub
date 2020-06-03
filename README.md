@@ -19,10 +19,10 @@ The using of Adapter design pattern is a little bit different in android, but it
 
 ### Participants:
 
-Jehad M. Kuhail   120161454
+Jehad M. Kuhail   120161454 (coding)
 
 Yasin Kh. Yasin   120162214
 
-Hazem Kh. Hammad  120160079
+Hazem Kh. Hammad  120160079 (SRS)
 
-Alaa A. Wadi      120160315
+Alaa A. Wadi      120160315 (UML)
